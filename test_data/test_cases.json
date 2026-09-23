@@ -1,0 +1,153 @@
+[
+  {
+    "type": "url",
+    "input": "http://secure-bank-login.xyz/verify",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "https://paypa1-security.example/confirm",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "http://account-verification-login.xyz/update",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "https://microsoft-login-alert.example/verify",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "http://amazon-prize-claim.xyz/winner",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "http://google-security-check.example/account",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "https://instagram-verification.example/login",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "http://netflix-payment-alert.xyz/pay",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "https://bank-account-suspended.example/restore",
+    "expected": "phishing"
+  },
+  {
+    "type": "url",
+    "input": "http://free-gift-card-claim.xyz/redeem",
+    "expected": "phishing"
+  },
+  {
+    "type": "message",
+    "input": "Your account will be blocked. Verify your identity immediately.",
+    "expected": "phishing"
+  },
+  {
+    "type": "message",
+    "input": "Congratulations! You have won a prize. Click the link to claim it now.",
+    "expected": "phishing"
+  },
+  {
+    "type": "message",
+    "input": "Urgent: Your bank account has been suspended. Confirm your details immediately.",
+    "expected": "phishing"
+  },
+  {
+    "type": "message",
+    "input": "Your password has expired. Login now to prevent account closure.",
+    "expected": "phishing"
+  },
+  {
+    "type": "message",
+    "input": "We detected unusual activity. Verify your account within 24 hours.",
+    "expected": "phishing"
+  },
+
+  {
+    "type": "url",
+    "input": "https://www.example.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.google.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.microsoft.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.apple.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.amazon.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.github.com",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.wikipedia.org",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.python.org",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.nasa.gov",
+    "expected": "safe"
+  },
+  {
+    "type": "url",
+    "input": "https://www.linkedin.com",
+    "expected": "safe"
+  },
+  {
+    "type": "message",
+    "input": "Your order has been shipped and will arrive tomorrow.",
+    "expected": "safe"
+  },
+  {
+    "type": "message",
+    "input": "Your monthly statement is now available in your account.",
+    "expected": "safe"
+  },
+  {
+    "type": "message",
+    "input": "Your appointment is confirmed for tomorrow at 10 AM.",
+    "expected": "safe"
+  },
+  {
+    "type": "message",
+    "input": "Thank you for registering. Your account has been successfully created.",
+    "expected": "safe"
+  },
+  {
+    "type": "message",
+    "input": "Your payment was successfully processed. Thank you for your purchase.",
+    "expected": "safe"
+  }
+]
