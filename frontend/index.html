@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishXplain | Phishing Analyzer</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">PX</div>
+
+                <div>
+                    <h1>PhishXplain</h1>
+                    <p>AI-Powered Phishing Detection</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Analyzer Online
+            </div>
+        </header>
+
+
+        <!-- Hero -->
+        <main>
+
+            <section class="hero">
+                <span class="badge">AI × CYBERSECURITY</span>
+
+                <h2>
+                    Detect. Explain. <span>Protect.</span>
+                </h2>
+
+                <p>
+                    Analyze suspicious links and messages and understand
+                    why they may be phishing.
+                </p>
+            </section>
+
+
+            <!-- Analyzer Card -->
+            <section class="analyzer-card">
+
+                <!-- Input Type -->
+                <div class="input-tabs">
+
+                    <button
+                        class="tab active"
+                        id="urlTab"
+                        type="button"
+                        onclick="switchMode('url')">
+                        🔗 URL Analysis
+                    </button>
+
+                    <button
+                        class="tab"
+                        id="messageTab"
+                        type="button"
+                        onclick="switchMode('message')">
+                        💬 Message Analysis
+                    </button>
+
+                </div>
+
+
+                <!-- Input -->
+                <div class="input-section">
+
+                    <label id="inputLabel">
+                        Enter a suspicious URL
+                    </label>
+
+                    <textarea
+                        id="inputText"
+                        placeholder="https://example.com/login"
+                        rows="5"></textarea>
+
+                    <div class="input-info">
+                        <span id="inputHint">
+                            We'll analyze the URL for suspicious characteristics.
+                        </span>
+
+                        <span id="charCount">0 characters</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Analyze Button -->
+                <button
+                    class="analyze-btn"
+                    id="analyzeBtn"
+                    onclick="analyzeInput()">
+
+                    <span id="buttonText">Analyze Threat</span>
+
+                    <div id="loader" class="loader hidden"></div>
+
+                </button>
+
+            </section>
+
+
+            <!-- Result -->
+            <section
+                class="result-section hidden"
+                id="resultSection">
+
+                <div class="result-header">
+                    <div>
+                        <p class="result-label">ANALYSIS RESULT</p>
+                        <h3 id="resultTitle">Threat Analysis</h3>
+                    </div>
+
+                    <div
+                        class="risk-badge"
+                        id="riskBadge">
+                        HIGH RISK
+                    </div>
+                </div>
+
+
+                <!-- Score -->
+                <div class="score-container">
+
+                    <div class="score-circle" id="scoreCircle">
+
+                        <div class="score-content">
+                            <span id="riskScore">91</span>
+                            <small>/100</small>
+                        </div>
+
+                    </div>
+
+                    <div class="score-info">
+                        <h4 id="riskLevel">High Risk</h4>
+
+                        <p id="riskDescription">
+                            Multiple phishing indicators were detected.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Reasons -->
+                <div class="result-grid">
+
+                    <div class="result-box">
+
+                        <div class="box-title">
+                            <span>🔍</span>
+                            Why is it suspicious?
+                        </div>
+
+                        <ul id="reasonsList">
+                            <!-- Reasons inserted by JS -->
+                        </ul>
+
+                    </div>
+
+
+                    <div class="result-box recommendation">
+
+                        <div class="box-title">
+                            <span>🛡️</span>
+                            Recommended Action
+                        </div>
+
+                        <p id="recommendation">
+                            Do not click the link or provide sensitive
+                            information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+                <p>
+                    PhishXplain • AI-assisted cybersecurity analysis
+                </p>
+
+                <p class="disclaimer">
+                    Results are risk indicators, not guaranteed verdicts.
+                </p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
